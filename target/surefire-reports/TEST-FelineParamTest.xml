@@ -66,6 +66,6 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="FelineParamTest" name="getKittensTest[Количество котят 1, ожидаемое количество 1]" time="0.001"/>
-  <testcase classname="FelineParamTest" name="getKittensTest[Количество котят 5, ожидаемое количество 5]" time="0.001"/>
-  <testcase classname="FelineParamTest" name="getKittensTest[Количество котят 2, ожидаемое количество 2]" time="0"/>
+  <testcase classname="FelineParamTest" name="getKittensTest[Количество котят 5, ожидаемое количество 5]" time="0"/>
+  <testcase classname="FelineParamTest" name="getKittensTest[Количество котят 2, ожидаемое количество 2]" time="0.001"/>
 </testsuite>

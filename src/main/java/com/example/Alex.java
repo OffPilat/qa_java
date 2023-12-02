@@ -4,12 +4,10 @@ import java.util.List;
 
 public class Alex extends Lion {
 
-    private Feline feline;
-
     public Alex() throws Exception {
         super("Самец", new Feline());
-
     }
+
 
     @Override
     public int getKittens() {

@@ -28,6 +28,15 @@ public class LionTest {
     }
 
     @Test
+    public void getKittensTest() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        int actualResult = lion.getKittens();
+        int expectedResult = 1;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
     public void doesHaveManeExceptionTest() {
 
         Throwable thrown = catchThrowable(() -> {
