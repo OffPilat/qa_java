@@ -2,14 +2,12 @@ import com.example.Feline;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Spy;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineParamTest {
-    @Spy
-    Feline feline = new Feline();
+
 
     @Parameterized.Parameter
     public int countKittens;
@@ -28,7 +26,8 @@ public class FelineParamTest {
 
     @Test
     public void getKittensTest() {
+        Feline feline = new Feline();
         int actualResult = feline.getKittens(countKittens);
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 }

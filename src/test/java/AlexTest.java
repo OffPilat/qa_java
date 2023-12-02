@@ -13,7 +13,7 @@ public class AlexTest {
         Alex alex = new Alex();
         int actualResult = alex.getKittens();
         int expectedResult = 0;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class AlexTest {
         Alex alex = new Alex();
         List actualResult = alex.getFriends();
         List expectedResult = List.of("Марти", "Глория", "Мелман");
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class AlexTest {
         Alex alex = new Alex();
         String actualResult = alex.getPlaceOfLiving();
         String expectedResult = "Нью-Йоркский зоопарк";
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
 

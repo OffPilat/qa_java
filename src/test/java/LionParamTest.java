@@ -28,8 +28,8 @@ public class LionParamTest {
     public static Object[][] data() {
         return new Object[][]{
                 {1, 1, "Самец", true},
-                {5, 5, "Самка", false}
-                //,{2, 2, "НедопустимоеЗначение", false} Как можно реализовать кейс с недопустимым значением чтобы он не падал?
+                {5, 5, "Самка", false},
+                {2, 2, "Самка", false}
         };
     }
 
@@ -40,18 +40,18 @@ public class LionParamTest {
 
     @Test
     public void getKittensTest() throws Exception {
-        Lion lion = new Lion(feline);
-        Mockito.when(lion.getKittens()).thenReturn(countKittens);
+        Lion lion = new Lion(sex, feline);
+        Mockito.when(feline.getKittens()).thenReturn(countKittens);
         int actualResult = lion.getKittens();
         int expectedResult = expectedKittens;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     public void doesHaveManeTest() throws Exception {
-        Lion lion = new Lion(sex);
+        Lion lion = new Lion(sex, feline);
         Boolean actualResult = lion.doesHaveMane();
         Boolean expectedResult = expectedSex;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 }
